@@ -31,6 +31,7 @@ document.getElementById('btn-donate-now')
             document.getElementById('account-balance').innerText = newBalance;
             const remainBalance2 = remainBalance - addMoney;
             document.getElementById('remain-balance').innerText = remainBalance2;
+            document.getElementById('my_modal_1').showModal();
 
             // add to transaction history
             const div = document.createElement('div');
@@ -54,7 +55,6 @@ document.getElementById('btn-donate-now')
         }
 
     })
-
 
 
 

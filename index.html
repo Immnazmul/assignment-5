@@ -56,8 +56,20 @@
                 </p>
                 <div class="flex flex-col gap-3">
                     <input id="input-add-money" type="text" placeholder="Write Donation Amount" class="input border-none input-bordered w-full" />
-                <button id="btn-donate-now" class="btn btn-primary bg-lime-300 text-black border-none font-bold">Donate Now</button>
-                </div>
+                <button id="btn-donate-now" class="btn btn-primary bg-lime-300 text-black border-none font-bold" onClick=()>Donate Now</button>
+                <dialog id="my_modal_1" className="modal">
+                  <div className="modal-box">
+                    <h3 className="font-bold text-xl">Congrats!</h3>
+                    <img src="../assignment-5/assets/coin.png" alt="">
+                    <p className="py-4">You Have Donated for Humankind</p>
+                    <div className="modal-action">
+                      <form method="dialog">
+                        <button class="btn">Close</button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
+                 </div>
               </div>
             </div>
           </div>
