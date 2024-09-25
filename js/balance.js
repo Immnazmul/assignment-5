@@ -16,9 +16,9 @@ document.getElementById('btn-donate-now')
         event.preventDefault();
 
         const addMoney = getInputFieldValueById('input-add-money');
-        
+        const remainBalance = getTextFieldValueById('remain-balance');
 
-        if(isNaN(addMoney)){
+        if(isNaN(addMoney) || (addMoney > remainBalance)){
             alert('Failed to donate. Invalid amount');
             return;
         }
@@ -29,6 +29,8 @@ document.getElementById('btn-donate-now')
             const newBalance = balance + addMoney;
 
             document.getElementById('account-balance').innerText = newBalance;
+            const remainBalance2 = remainBalance - addMoney;
+            document.getElementById('remain-balance').innerText = remainBalance2;
 
             // add to transaction history
             const div = document.createElement('div');
